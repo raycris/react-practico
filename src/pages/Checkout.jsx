@@ -1,5 +1,7 @@
 import React from "react";
 
+import Arrow from "@icons/flechita.svg";
+
 const Checkout = () => {
   return (
     <div className="my-order">
@@ -12,7 +14,7 @@ const Checkout = () => {
               <span>7 articulos</span>
             </p>
             <p>$560.00</p>
-            <img src="./assets/icons/flechita.svg" alt="arrow" />
+            <img src={Arrow} alt="arrow" />
           </div>
         </div>
       </div>

@@ -1,11 +1,14 @@
 import React from "react";
-import "../styles/SendEmail.scss";
+
+import "@styles/SendEmail.scss";
+
+import YardSale from "@logos/logo_yard_sale.svg";
 
 const SendEmail = () => {
   return (
     <div className="SendEmail">
       <div className="form-container">
-        <img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
+        <img src={YardSale} alt="logo" className="logo" />
         <h1 className="title">Email has been sent!</h1>
         <p className="subtitle">
           Please check your inbox for instructions on how to reset the password
