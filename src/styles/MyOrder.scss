@@ -1,0 +1,64 @@
+@use "vars";
+
+.MyOrder {
+  top: 60px;
+  right: 0;
+  width: 360px;
+  bottom: 0;
+  border: 1px solid var(--very-light-pink);
+  padding: 24px;
+  position: absolute;
+  box-sizing: border-box;
+  border-radius: 6px;
+  background-color: white;
+}
+.title-container {
+  display: flex;
+}
+.title-container img {
+  transform: rotate(180deg);
+  margin-right: 14px;
+}
+.title {
+  font-size: var(--lg);
+  font-weight: bold;
+}
+.order {
+  gap: 16px;
+  display: grid;
+  padding: 0 24px;
+  align-items: center;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  background-color: var(--text-input-field);
+  grid-template-columns: auto 1fr;
+}
+.order p:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+}
+.order p span:nth-child(1) {
+  font-size: var(--md);
+  font-weight: bold;
+}
+.order p:nth-child(2) {
+  text-align: end;
+  font-weight: bold;
+}
+
+.primary-button {
+  color: var(--white);
+  width: 100%;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: var(--md);
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: var(--hospital-green);
+}
+@media (max-width: 640px) {
+  .MyOrder {
+    width: 100%;
+  }
+}
