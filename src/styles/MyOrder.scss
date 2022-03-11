@@ -8,6 +8,7 @@
   border: 1px solid var(--very-light-pink);
   padding: 24px;
   position: absolute;
+  animation: swipeLeft 0.26s ease;
   box-sizing: border-box;
   border-radius: 6px;
   background-color: white;
@@ -57,6 +58,16 @@
   border-radius: 8px;
   background-color: var(--hospital-green);
 }
+
+@keyframes swipeLeft {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 360px;
+  }
+}
+
 @media (max-width: 640px) {
   .MyOrder {
     width: 100%;
