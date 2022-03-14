@@ -50,7 +50,7 @@ const Header = () => {
 
       <div className="navbar-right">
         <ul>
-          <li className="navbar-email" onClick={() =>setToggle(!toggle)}>
+          <li className="navbar-email" onClick={() => setToggle(!toggle)}>
             JoeDumas@example.com
           </li>
           <li
@@ -63,7 +63,12 @@ const Header = () => {
         </ul>
       </div>
       {toggle && <Menu />}
-      {toggleOrders && <MyOrder />}
+      {toggleOrders && (
+        <MyOrder
+          toggleOrders={toggleOrders}
+          setToggleOrders={setToggleOrders}
+        />
+      )}
     </nav>
   );
 };

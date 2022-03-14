@@ -1,9 +1,12 @@
 @use 'vars';
 nav {
+	top: 0;
   display: flex;
   padding: 0 24px;
+	position: sticky;
   border-bottom: 1px solid var(--very-light-pink);
   justify-content: space-between;
+	background-color: #fff;
 }
 .menu {
   display: none;

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 import AppContext from "@context/AppContext";
 
@@ -8,7 +8,7 @@ import "@styles/MyOrder.scss";
 
 import Arrow from "@icons/flechita.svg";
 
-const MyOrder = () => {
+const MyOrder = ({ toggleOrders, setToggleOrders }) => {
   const {
     state: { cart },
   } = useContext(AppContext);
@@ -19,12 +19,17 @@ const MyOrder = () => {
     const sum = cart.reduce(reducer, 0);
     return sum;
   };
+
   return (
     <aside className="MyOrder">
-      <div className="title-container">
+      <div
+        className="title-container"
+        onClick={() => setToggleOrders(!toggleOrders)}
+      >
         <img src={Arrow} alt="arrow" />
         <p className="title">My order</p>
       </div>
+
       <div className="my-order-content">
         {cart.map((item) => (
           <OrderItem product={item} key={`orderItem-${item.id}`} />

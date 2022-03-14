@@ -2,16 +2,22 @@
 
 .MyOrder {
   top: 60px;
-  right: 0;
+  right: 0px;
   width: 360px;
-  bottom: 0;
+  bottom: 0px;
   border: 1px solid var(--very-light-pink);
   padding: 24px;
-  position: absolute;
+  position: fixed;
   animation: swipeLeft 0.26s ease;
   box-sizing: border-box;
   border-radius: 6px;
   background-color: white;
+
+}
+
+.vaina{
+  background-color: aqua;
+  height: 50px;
 }
 .title-container {
   display: flex;
@@ -23,6 +29,11 @@
 .title {
   font-size: var(--lg);
   font-weight: bold;
+}
+.my-order-content{
+  overflow-y: scroll;
+  max-height: 400px;
+  scroll-behavior: smooth;
 }
 .order {
   gap: 16px;
